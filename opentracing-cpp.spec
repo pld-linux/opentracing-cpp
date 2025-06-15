@@ -58,7 +58,8 @@ cd build
 %cmake .. \
 	%{!?with_static_libs:-DBUILD_STATIC_LIBS=OFF} \
 	%{!?with_tests:-DBUILD_TESTING=OFF} \
-	-DENABLE_LINTING=OFF
+	-DENABLE_LINTING=OFF \
+	-DLIB_INSTALL_DIR=%{_lib}
 
 %{__make}
 
